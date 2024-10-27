@@ -7,17 +7,19 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <main className="font-sans">
-        <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-    </Router>
+    <div className="container mx-auto">
+      <Router>
+        <Navbar />
+        <main className="font-sans">
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+      </Router>
+    </div>
   );
 }
 

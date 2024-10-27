@@ -9,7 +9,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-blue-600 text-blue-100 flex justify-between items-center p-8">
+    <nav className="bg-blue-100 text-blue-600 flex justify-between items-center p-4 w-full">
       <div className="flex-grow flex justify-start">
         <button className="text-xl font-bold">
           <Link to="/" className="">
@@ -24,7 +24,7 @@ function Navbar() {
         <ul
           className={`${
             isDropdownOpen ? "block" : "hidden"
-          } absolute top-16 left-0 w-full bg-blue-600 md:flex md:space-x-10 md:static md:w-auto`}
+          } absolute top-16 left-0 w-full bg-blue-100 md:flex md:space-x-10 md:static md:w-auto`}
         >
           <li className="border-b border-blue-700 md:border-none w-full">
             <Link
