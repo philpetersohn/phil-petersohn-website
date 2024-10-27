@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main className="font-sans">
         <Routes>
           <Route path="/" element={<About />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
