@@ -1,21 +1,23 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="p-4 bg-gray-900 text-white">
       <ul className="flex justify-around">
         <li>
-          <a href="#about" className="hover:text-teal-400">
+          <Link to="/" className="hover:text-teal-400">
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#projects" className="hover:text-teal-400">
+          <Link to="/projects" className="hover:text-teal-400">
             Projects
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contact" className="hover:text-teal-400">
+          <Link to="/contact" className="hover:text-teal-400">
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

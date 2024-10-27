@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section id="contact" className="p-8 bg-white text-gray-900">
+    <section className="p-8 bg-white text-gray-900">
       <h1 className="text-4xl font-bold mb-4">Contact</h1>
       <p>
         Feel free to reach out! You can contact me via email at{" "}
