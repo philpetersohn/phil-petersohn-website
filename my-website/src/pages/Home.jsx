@@ -1,14 +1,45 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
+
 function Home() {
+  useEffect(() => {
+    const section = document.querySelector("section");
+    section.classList.add("fade-in");
+  }, []);
+
   return (
-    <section className="p-8 bg-white text-gray-900">
-      <h1 className="text-4xl font-bold mb-4">Home</h1>
-      <p>
-        Feel free to reach out! You can contact me via email at{" "}
-        <a href="mailto:your.email@example.com" className="text-teal-500">
-          your.email@example.com
-        </a>
-        .
-      </p>
+    <section className="flex flex-col items-center opacity-0">
+      <h1 className="text-blue-600 text-5xl font-bold mb-6 mt-32">
+        Philipp Petersohn
+      </h1>
+      <h2 className="text-blue-600 text-2xl font-bold mb-6">
+        Full Stack Developer | React.js | Node.js | AWS
+      </h2>
+      <div className="max-w-2xl text-center">
+        <p className="text-blue-800 text-xl mb-8">
+          Detail-oriented and innovative front-end developer with 3+ years of
+          experience in designing dynamic websites, creating responsive designs,
+          and enhancing user experience. Proven expertise in collaborating with
+          cross-functional teams, gathering requirements and translating them
+          into technical specifications, and conducting troubleshooting and
+          debugging. Proficient in web architecture, development techniques,
+          objection-oriented design (OOP), design patterns, and agile
+          methodologies.
+        </p>
+      </div>
+      <div className="flex space-x-4">
+        <Link to="/contact">
+          <button className="bg-blue-600 font-bold text-blue-100 py-3 px-4 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors">
+            Get in Touch
+          </button>
+        </Link>
+        <Link to="/about">
+          <button className="bg-blue-100 font-bold text-blue-600 py-3 px-4 border-2 border-blue-500 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors">
+            Learn more about me
+          </button>
+        </Link>
+      </div>
     </section>
   );
 }
