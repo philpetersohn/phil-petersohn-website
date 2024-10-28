@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function Card({ title, description }) {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 m-4 flex flex-col">
+    <div className="bg-white shadow-lg rounded-lg p-6 m-4 flex flex-col transform transition-transform hover:scale-105 hover:shadow-2xl">
       <h2 className="text-blue-600 text-2xl font-bold mb-2 truncate w-full">
         {title}
       </h2>

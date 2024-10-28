@@ -8,7 +8,7 @@ function WorkExperience() {
         <FaBriefcase className="text-blue-600 text-3xl mr-2" />
         <h1 className="text-blue-600 text-3xl font-bold">Work Experience</h1>
       </div>
-      <div className="bg-white shadow-lg rounded-lg p-6">
+      <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
         <h1 className="font-bold text-xl">
           Full Stack Developer | GFT Technologies SE | Remote
         </h1>
@@ -52,7 +52,7 @@ function WorkExperience() {
           </li>
         </ul>
       </div>
-      <div className="bg-white shadow-lg rounded-lg p-6">
+      <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
         <h1 className="font-bold text-xl">
           Frontend Developer | Thinslices | Hybrid
         </h1>
@@ -86,7 +86,7 @@ function WorkExperience() {
           </li>
         </ul>
       </div>
-      <div className="bg-white shadow-lg rounded-lg p-6">
+      <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
         <h1 className="font-bold text-xl">
           Intern Frontend Developer | Thinslices | Hybrid
         </h1>
