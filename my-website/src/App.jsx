@@ -4,10 +4,11 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="container mx-auto">
+    <div className="">
       <Router>
         <Navbar />
         <main className="font-sans">
@@ -18,6 +19,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+        <Footer />
       </Router>
     </div>
   );

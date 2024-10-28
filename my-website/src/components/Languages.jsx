@@ -9,7 +9,7 @@ function Languages() {
         <h2 className="text-blue-600 text-3xl font-bold">Languages</h2>
       </div>
       <div className="flex items-start">
-        <ul className="list-disc space-y-2 text-lg mb-6 blue-bullets pl-8">
+        <ul className="list-disc space-y-2 text-lg mb-12 blue-bullets pl-8">
           <li>English</li>
           <li>German</li>
         </ul>
