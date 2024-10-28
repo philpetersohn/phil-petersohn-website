@@ -12,7 +12,7 @@ function Navbar() {
     <nav className="bg-blue-100 text-blue-600 flex justify-between items-center p-4 w-full">
       <div className="flex-grow flex justify-start">
         <button className="text-xl font-bold">
-          <Link to="/" className="">
+          <Link to="/home" className="">
             PP
           </Link>
         </button>
@@ -28,18 +28,18 @@ function Navbar() {
         >
           <li className="border-b border-blue-700 md:border-none w-full">
             <Link
-              to="/about"
-              className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center"
-            >
-              About
-            </Link>
-          </li>
-          <li className="border-b border-blue-700 md:border-none w-full">
-            <Link
               to="/home"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center"
             >
               Home
+            </Link>
+          </li>
+          <li className="border-b border-blue-700 md:border-none w-full">
+            <Link
+              to="/about"
+              className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center"
+            >
+              About
             </Link>
           </li>
           <li className="border-b border-blue-700 md:border-none w-full">

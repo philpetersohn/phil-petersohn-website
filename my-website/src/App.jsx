@@ -12,8 +12,8 @@ function App() {
         <Navbar />
         <main className="font-sans">
           <Routes>
-            <Route path="/" element={<About />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
