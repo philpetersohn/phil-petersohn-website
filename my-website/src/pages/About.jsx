@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import WorkExperience from "../components/WorkExperience";
 import TechnicalSkills from "../components/TechnicalSkills";
 import CoreCompetencies from "../components/CoreCompetencies";
+import Education from "../components/Education";
+import Languages from "../components/Languages";
 
 function About() {
   useEffect(() => {
@@ -30,6 +32,8 @@ function About() {
       <CoreCompetencies />
       <TechnicalSkills />
       <WorkExperience />
+      <Education />
+      <Languages />
     </section>
   );
 }
