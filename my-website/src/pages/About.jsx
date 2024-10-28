@@ -14,16 +14,16 @@ function About() {
   return (
     <section className="flex flex-col items-center justify-center opacity-0">
       <div className="text-center">
-        <h1 className="text-blue-600 text-5xl font-bold mb-6 mt-32">
+        <h1 className="text-blue-600 text-4xl md:text-4xl font-bold my-6">
           About Me
         </h1>
-        <p className="text-xl mb-6 max-w-4xl mx-auto">
+        <p className="text-xl md:text-xl mb-8 md:mb-11 max-w-3xl mx-auto">
           Empathetic and versatile Full Stack Software Engineer with over 3
           years of experience in web development. Proficient in React,
           TypeScript and Node.js, with a growing expertise in cloud technologies
           like AWS.
         </p>
-        <p className="text-xl mb-6 max-w-4xl mx-auto">
+        <p className="text-xl md:text-xl my-6 md:my-6 max-w-3xl mx-auto">
           Passionate about implementing deep work practices to enhance
           productivity and code quality. Committed to continuous learning and
           applying best practices in full stack software development.

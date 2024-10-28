@@ -1,18 +1,19 @@
 import { FaBriefcase } from "react-icons/fa";
+import "./coreCompetencies.css";
 
-export default function WorkExperience() {
+function WorkExperience() {
   return (
-    <div className="w-full max-w-4xl">
-      <div className="flex items-center mb-6">
+    <div className="w-full max-w-4xl space-y-6">
+      <div className="flex items-center mb-6 mt-6">
         <FaBriefcase className="text-blue-600 text-3xl mr-2" />
         <h1 className="text-blue-600 text-3xl font-bold">Work Experience</h1>
       </div>
-      <div>
+      <div className="bg-white shadow-lg rounded-lg p-6">
         <h1 className="font-bold text-xl">
           Full Stack Developer | GFT Technologies SE | Remote
         </h1>
-        <p className="italic text-xl mb-2">Feb 2024 - Aug 2024</p>
-        <ul className="list-disc space-y-2 text-xl mb-6">
+        <p className="italic text-lg mb-2">Feb 2024 - Aug 2024</p>
+        <ul className="list-disc space-y-2 text-lg mb-6 pl-6 blue-bullets">
           <li>
             Designed, created and maintained key features using React,
             TypeScript, and Node.js, ensuring the delivery of scalable and
@@ -51,12 +52,12 @@ export default function WorkExperience() {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="bg-white shadow-lg rounded-lg p-6">
         <h1 className="font-bold text-xl">
           Frontend Developer | Thinslices | Hybrid
         </h1>
-        <p className="italic text-xl mb-2">May 2021 - Dec 2023</p>
-        <ul className="list-disc space-y-2 text-xl mb-6">
+        <p className="italic text-lg mb-2">May 2021 - Dec 2023</p>
+        <ul className="list-disc space-y-2 text-lg mb-6 pl-6 blue-bullets">
           <li>
             Implemented dynamic content filtering using Next, React, and
             TypeScript, improving content discovery speed by 40% and enhancing
@@ -85,12 +86,12 @@ export default function WorkExperience() {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="bg-white shadow-lg rounded-lg p-6">
         <h1 className="font-bold text-xl">
           Intern Frontend Developer | Thinslices | Hybrid
         </h1>
-        <p className="italic text-xl mb-2">Feb 2021 - Apr 2021</p>
-        <ul className="list-disc space-y-2 text-xl mb-6">
+        <p className="italic text-lg mb-2">Feb 2021 - Apr 2021</p>
+        <ul className="list-disc space-y-2 text-lg mb-6 pl-6 blue-bullets">
           <li>
             Learned HTML5, CSS3, and JavaScript through books, videos, and
             documentation, developing a strong foundation in front-end web
@@ -107,3 +108,5 @@ export default function WorkExperience() {
     </div>
   );
 }
+
+export default WorkExperience;
