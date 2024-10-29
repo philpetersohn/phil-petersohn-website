@@ -4,14 +4,14 @@ import "./coreCompetencies.css";
 export default function CoreCompetencies() {
   return (
     <div className="w-full max-w-4xl">
-      <div className="flex items-center mb-6">
+      <div className="flex items-center mb-6 mt-6">
         <FaCode className="text-blue-600 text-3xl mr-2" />
         <h1 className="text-blue-600 text-3xl md:text-3xl font-bold">
           Core Competencies
         </h1>
       </div>
       <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
-        <ul className="list-disc list-inside space-y-2 text-xl md:text-xl max-w-3xl mx-auto blue-bullets ">
+        <ul className="list-disc list-inside space-y-2 text-lg md:text-xl max-w-3xl mx-auto blue-bullets">
           <li>Full Stack Development (React, TypeScript, Node.js, MongoDB)</li>
           <li>Cloud technologies (AWS)</li>
           <li>Database Design and Management</li>
