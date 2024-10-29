@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import me from "../assets/Picture4.jpg";
 
 function Home() {
   useEffect(() => {
@@ -9,7 +10,14 @@ function Home() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center opacity-0 justify-center min-h-screen px-8 md:px-4 lg:px-0">
+    <section className="flex flex-col items-center opacity-0 justify-center mt-40 px-8 md:px-4 lg:px-0">
+      <figure className="w-32 h-32 md:w-48 md:h-48 mb-6">
+        <img
+          src={me}
+          alt="Profile"
+          className="rounded-full w-full h-full object-cover"
+        />
+      </figure>
       <h1 className="text-blue-600 text-4xl md:text-6xl font-bold mb-6 text-center">
         Philipp Petersohn
       </h1>

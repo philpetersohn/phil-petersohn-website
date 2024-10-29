@@ -19,7 +19,7 @@ export default function TechnicalSkills() {
   ];
 
   return (
-    <div className="w-full max-w-4xl">
+    <div className="w-full max-w-4xl mt-6">
       <div className="flex items-center">
         <FaCode className="text-blue-600 text-3xl mr-2" />
         <h1 className="text-blue-600 text-3xl md:text-3xl font-bold">

@@ -6,7 +6,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import "./Contact.css"; // Import the CSS file
+import "./Contact.css";
 
 function Contact() {
   useEffect(() => {
@@ -15,7 +15,7 @@ function Contact() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center opacity-0 px-8 md:px-4 lg:px-0">
+    <section className="flex flex-col items-center justify-center opacity-0 px-8 md:px-4 lg:px-0 mt-40">
       <div className="text-center">
         <h1 className="text-blue-600 text-4xl md:text-6xl font-bold my-6">
           Contact Me

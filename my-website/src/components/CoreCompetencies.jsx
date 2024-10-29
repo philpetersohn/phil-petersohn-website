@@ -10,18 +10,20 @@ export default function CoreCompetencies() {
           Core Competencies
         </h1>
       </div>
-      <ul className="list-disc list-inside space-y-2 text-xl md:text-xl mb-6 max-w-3xl mx-auto blue-bullets">
-        <li>Full Stack Development (React, TypeScript, Node.js, MongoDB)</li>
-        <li>Cloud technologies (AWS)</li>
-        <li>Database Design and Management</li>
-        <li>RESTful API Development</li>
-        <li>Deep Work & Productivity Optimizations</li>
-        <li>Responsive Web Design</li>
-        <li>Problem-Solving & Debugging</li>
-        <li>Version Control (Git)</li>
-        <li>Agile Methodologies (Scrum, Kanban)</li>
-        <li>Committed to continuous learning and improvement</li>
-      </ul>
+      <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
+        <ul className="list-disc list-inside space-y-2 text-xl md:text-xl max-w-3xl mx-auto blue-bullets ">
+          <li>Full Stack Development (React, TypeScript, Node.js, MongoDB)</li>
+          <li>Cloud technologies (AWS)</li>
+          <li>Database Design and Management</li>
+          <li>RESTful API Development</li>
+          <li>Deep Work & Productivity Optimizations</li>
+          <li>Responsive Web Design</li>
+          <li>Problem-Solving & Debugging</li>
+          <li>Version Control (Git)</li>
+          <li>Agile Methodologies (Scrum, Kanban)</li>
+          <li>Committed to continuous learning and improvement</li>
+        </ul>
+      </div>
     </div>
   );
 }
