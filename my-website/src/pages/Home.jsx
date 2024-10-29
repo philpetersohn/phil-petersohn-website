@@ -36,14 +36,14 @@ function Home() {
           methodologies.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row w-full md:w-auto space-y-4 md:space-y-0 md:space-x-12">
+      <div className="flex flex-col md:flex-row w-full md:w-auto space-y-4 md:space-y-0 md:space-x-12 mb-6">
         <Link to="/contact" className="w-full md:w-auto">
-          <button className="w-full md:w-auto bg-blue-600 text-lg md:text-xl font-semibold text-blue-100 py-3 px-10 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors">
+          <button className="w-full md:w-auto bg-blue-600 text-lg md:text-xl font-semibold text-blue-100 py-3 px-10 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors h-14">
             Get in Touch
           </button>
         </Link>
         <Link to="/about" className="w-full md:w-auto">
-          <button className="w-full md:w-auto bg-blue-100 text-lg md:text-xl font-semibold text-blue-600 py-3 px-4 border-2 border-blue-500 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors">
+          <button className="w-full md:w-auto bg-blue-100 text-lg md:text-xl font-semibold text-blue-600 py-3 px-4 box-border border-2 border-blue-500 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors h-14">
             Learn more
           </button>
         </Link>
