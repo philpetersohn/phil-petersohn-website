@@ -31,7 +31,6 @@ function Navbar() {
             <Link
               to="/home"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
-              onClick={toggleDropdown}
             >
               Home
             </Link>
@@ -40,7 +39,6 @@ function Navbar() {
             <Link
               to="/about"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
-              onClick={toggleDropdown}
             >
               About
             </Link>
@@ -49,20 +47,18 @@ function Navbar() {
             <Link
               to="/projects"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
-              onClick={toggleDropdown}
             >
               Projects
             </Link>
           </li>
           <li
-            className={`md:border-none lg:border-none w-full ${
-              !isDropdownOpen ? "" : "shadow-lg"
+            className={`md:border-none lg:border-none w-full md:shadow-none ${
+              isDropdownOpen ? "shadow-lg" : ""
             }`}
           >
             <Link
               to="/contact"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
-              onClick={toggleDropdown}
             >
               Contact
             </Link>
