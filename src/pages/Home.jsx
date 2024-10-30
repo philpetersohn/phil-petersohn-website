@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaLightbulb } from "react-icons/fa"; // Import the right arrow and info circle icons
-import "./Home.css";
+import "./home.css";
 import me from "../assets/Picture4.jpg";
 
 function Home() {
