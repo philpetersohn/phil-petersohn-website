@@ -6,7 +6,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import "./Contact.css";
+import "./contact.css";
 
 function Contact() {
   useEffect(() => {
