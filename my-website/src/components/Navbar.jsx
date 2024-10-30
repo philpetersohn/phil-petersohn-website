@@ -20,7 +20,7 @@ function Navbar() {
           className="block md:hidden font-bold text-xl mx-4"
           onClick={toggleDropdown}
         >
-          ☰
+          {isDropdownOpen ? "✕" : "☰"}
         </button>
         <ul
           className={`${

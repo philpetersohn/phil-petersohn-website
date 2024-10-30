@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FaArrowRight, FaLightbulb } from "react-icons/fa"; // Import the right arrow and info circle icons
 import "./Home.css";
 import me from "../assets/Picture4.jpg";
 
@@ -10,7 +11,7 @@ function Home() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center opacity-0 justify-center mt-40 px-8 md:px-4 lg:px-0">
+    <section className="flex flex-col items-center opacity-0 justify-center min-h-screen px-8 md:px-4 lg:px-0">
       <figure className="w-32 h-32 md:w-48 md:h-48 mb-6">
         <img
           src={me}
@@ -36,15 +37,17 @@ function Home() {
           methodologies.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row w-full md:w-auto space-y-4 md:space-y-0 md:space-x-12 mb-6">
+      <div className="flex flex-col md:flex-row w-full md:w-auto space-y-4 md:space-y-0 md:space-x-12 mb-16">
         <Link to="/contact" className="w-full md:w-auto">
-          <button className="w-full md:w-auto bg-blue-600 text-lg md:text-xl font-semibold text-blue-100 py-3 px-10 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors h-14">
+          <button className="w-full md:w-auto bg-blue-600 text-lg md:text-xl font-semibold text-blue-100 py-3 px-10 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors h-14 flex items-center justify-center">
             Get in Touch
+            <FaArrowRight className="ml-2" />
           </button>
         </Link>
         <Link to="/about" className="w-full md:w-auto">
-          <button className="w-full md:w-auto bg-blue-100 text-lg md:text-xl font-semibold text-blue-600 py-3 px-4 box-border border-2 border-blue-500 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors h-14">
+          <button className="w-full md:w-auto bg-blue-100 text-lg md:text-xl font-semibold text-blue-600 py-3 px-4 box-border border-2 border-blue-500 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors h-14 flex items-center justify-center">
             Learn more
+            <FaLightbulb className="ml-2" />
           </button>
         </Link>
       </div>
