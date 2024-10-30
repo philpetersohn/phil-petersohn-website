@@ -12,7 +12,10 @@ export default function CoreCompetencies() {
       </div>
       <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
         <ul className="list-disc space-y-2 text-lg mb-6 pl-6 blue-bullets">
-          <li>Full Stack Development (React, TypeScript, Node.js, MongoDB)</li>
+          <li>
+            Full Stack Development (React, TypeScript, Node.js, Express,
+            MongoDB)
+          </li>
           <li>Cloud technologies (AWS)</li>
           <li>Database Design and Management</li>
           <li>RESTful API Development</li>

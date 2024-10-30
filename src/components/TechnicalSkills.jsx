@@ -6,15 +6,15 @@ export default function TechnicalSkills() {
     {
       title: "Frontend",
       description:
-        "React, Next.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, TailwindCSS, Responsive Design",
+        "React, Next.js, JavaScript, TypeScript, HTML5, CSS3, TailwindCSS, Responsive Design",
     },
     {
       title: "Backend",
-      description: "Node.js, AWS, RESTful APIs, Express, MongoDB, Mongoose",
+      description: "Node.js, Amazon Web Services, Vercel,  RESTful APIs, Express, MongoDB, Mongoose",
     },
     {
       title: "Tools",
-      description: "Git, VS Code, Jira, Jest, npm, Cypress",
+      description: "Git, VS Code, Jira, Kanban, Babel, npm, yarn, webpack, Jest, npm, Cypress",
     },
   ];
 
