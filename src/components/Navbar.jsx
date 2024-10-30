@@ -8,6 +8,10 @@ function Navbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
   return (
     <nav className="bg-blue-100 text-blue-600 flex justify-between items-center p-4 w-full shadow-md">
       <div className="flex-grow flex justify-start  md:pl-10 lg:mx-20">
@@ -31,6 +35,7 @@ function Navbar() {
             <Link
               to="/home"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
+              onClick={closeDropdown}
             >
               Home
             </Link>
@@ -39,6 +44,7 @@ function Navbar() {
             <Link
               to="/about"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
+              onClick={closeDropdown}
             >
               About
             </Link>
@@ -47,6 +53,7 @@ function Navbar() {
             <Link
               to="/projects"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
+              onClick={closeDropdown}
             >
               Projects
             </Link>
@@ -59,6 +66,7 @@ function Navbar() {
             <Link
               to="/contact"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
+              onClick={closeDropdown}
             >
               Contact
             </Link>
