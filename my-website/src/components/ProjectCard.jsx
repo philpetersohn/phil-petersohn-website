@@ -23,7 +23,7 @@ const ProjectCard = ({ title, description, techStack, githubLink }) => {
           {techStack.map((tech, index) => (
             <span
               key={index}
-              className="text-xs md:text-sm px-2 md:px-3 py-1 md:py-2 rounded-md bg-blue-200 flex items-center "
+              className="text-xs md:text-sm px-2 md:px-3 py-0.5 md:py-1 rounded-md bg-blue-200 flex items-center"
             >
               {tech}
             </span>
