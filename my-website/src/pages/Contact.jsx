@@ -15,9 +15,9 @@ function Contact() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center opacity-0 px-8 md:px-4 lg:px-0 mt-40">
+    <section className="flex flex-col items-center justify-center opacity-0 px-8 md:px-16 lg:px-0 mt-16">
       <div className="text-center">
-        <h1 className="text-blue-600 text-4xl md:text-6xl font-bold my-6">
+        <h1 className="text-blue-600 text-4xl md:text-6xl font-bold text-center mb-6">
           Contact Me
         </h1>
         <p className="text-xl md:text-2xl mb-8 md:mb-11 max-w-3xl mx-auto">
@@ -28,7 +28,10 @@ function Contact() {
           <div className="flex flex-col items-center text-lg mb-2 md:col-span-1 md:col-start-1">
             <FaEnvelope className="hover:scale-110 transition-transform text-blue-600 mb-1 text-3xl" />
             <h1 className="text-blue-600 mb-1 font-bold">Email</h1>
-            <a href="mailto:petersohn.phil@gmail.com" className="text-blue-900">
+            <a
+              href="mailto:petersohn.phil@gmail.com"
+              className="text-blue-900 hover:underline"
+            >
               petersohn.phil@gmail.com
             </a>
           </div>
@@ -49,7 +52,7 @@ function Contact() {
               href="https://www.linkedin.com/in/philipp-petersohn"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-900"
+              className="text-blue-900 hover:underline"
             >
               linkedin.com/in/philipp-petersohn
             </a>
@@ -61,11 +64,22 @@ function Contact() {
               href="https://github.com/philpetersohn"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-900"
+              className="text-blue-900 hover:underline"
             >
               github.com/philipp-petersohn
             </a>
           </div>
+        </div>
+        <div className="text-xl md:text-2xl mb-8 md:mb-11 max-w-4xl mx-auto px-12 py-6 bg-blue-600 mt-8 my-6 rounded-3xl">
+          <h1 className="text-blue-100 text-2xl md:text-3xl font-bold m-4">
+            Let us connect!
+          </h1>
+          <p className="text-blue-100 m-4">
+            Whether you have a project in mind, a question about my work, or
+            just want to say hello, I would love to hear from you. Choose your
+            preferred method of contact above, and I will get back to you as
+            soon as possible.
+          </p>
         </div>
       </div>
     </section>

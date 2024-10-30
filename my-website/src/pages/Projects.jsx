@@ -19,7 +19,7 @@ const Projects = () => {
         "Express",
         "MongoDB",
       ],
-      githubLink: "https://github.com/your-github-link",
+      githubLink: "https://github.com/philpetersohn/nre-mern",
     },
     {
       title: "My Website",
