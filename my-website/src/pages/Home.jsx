@@ -15,7 +15,7 @@ function Home() {
       <figure className="w-32 h-32 md:w-48 md:h-48 mb-6">
         <img
           src={me}
-          alt="Profile"
+          alt="Profile picture"
           className="rounded-full w-full h-full object-cover"
         />
       </figure>
