@@ -30,7 +30,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="bg-gray-100 min-h-screen px-8 md:px-16 lg:px-0">
+    <section className="bg-gray-100 px-8 md:px-16 lg:px-0">
       <div className="container mx-auto">
         <h2 className="text-blue-600 text-4xl md:text-6xl font-bold mt-16 text-center mb-6">
           My Projects
