@@ -9,13 +9,13 @@ const ProjectCard = ({ title, description, techStack, githubLink }) => {
           {title}
         </h3>
         <p className="text-gray-700 text-lg md:text-xl mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-4 items-center">
           {githubLink && (
             <a
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 text-sm px-2 py-1 rounded-md hover:scale-110 transition-transform"
+              className="text-gray-800 text-sm px-2 py-1 rounded-md hover:scale-110 transition-transform flex items-center"
             >
               <FaGithub className="text-2xl" />
             </a>
@@ -23,7 +23,7 @@ const ProjectCard = ({ title, description, techStack, githubLink }) => {
           {techStack.map((tech, index) => (
             <span
               key={index}
-              className="text-xs md:text-sm px-2 md:px-3 py-0.5 md:py-1 rounded-md bg-blue-200 flex items-center"
+              className="text-xs md:text-sm px-2 md:px-3 py-1 md:py-1.5 rounded-md bg-blue-200 flex items-center h-8 md:h-10"
             >
               {tech}
             </span>

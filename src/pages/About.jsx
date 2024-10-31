@@ -17,13 +17,13 @@ function About() {
         <h1 className="text-blue-600 text-4xl md:text-6xl font-bold mt-16">
           About Me
         </h1>
-        <p className="text-xl md:text-2xl mt-8 max-w-5xl mx-auto">
-          Empathetic and versatile Full Stack Software Engineer with over 3
-          years of experience in web development. Proficient in React,
-          TypeScript and Node.js, with a growing expertise in cloud technologies
-          like AWS.
+        <p className="text-xl md:text-2xl mt-8 max-w-5xl mx-auto px-4">
+          Empathetic and versatile Software Engineer with over 3 years of
+          experience in web development. Proficient in React, TypeScript and
+          Node.js, with a growing expertise in cloud technologies like Amazon
+          Web Services.
         </p>
-        <p className="text-xl md:text-2xl md:my-6 max-w-5xl mx-auto">
+        <p className="text-xl md:text-2xl mt-4 md:my-6 max-w-5xl mx-auto px-4">
           Passionate about implementing deep work practices to enhance
           productivity and code quality. Committed to continuous learning and
           applying best practices in full stack software development.

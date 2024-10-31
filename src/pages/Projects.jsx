@@ -9,7 +9,7 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Tasks Management App",
+      title: "Task Management App",
       description: "I created a tasks management app using the MERN stack.",
       techStack: [
         "JavaScript",
@@ -35,7 +35,7 @@ const Projects = () => {
         <h2 className="text-blue-600 text-4xl md:text-6xl font-bold mt-16 text-center mb-6">
           My Projects
         </h2>
-        <div className="flex flex-col space-y-8">
+        <div className="flex flex-col space-y-8 mb-8 md:mb-0">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

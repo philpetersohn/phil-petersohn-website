@@ -53,14 +53,14 @@ function Home() {
       </h2>
       <div className="max-w-3xl text-center">
         <p className="text-xl md:text-2xl mb-8 md:mb-11 max-w-3xl mx-auto">
-          Detail-oriented and innovative front-end developer with 3+ years of
-          experience in designing dynamic websites, creating responsive designs,
-          and enhancing user experience. Proven expertise in collaborating with
-          cross-functional teams, gathering requirements and translating them
-          into technical specifications, and conducting troubleshooting and
-          debugging. Proficient in web architecture, development techniques,
-          objection-oriented design (OOP), design patterns, and agile
-          methodologies.
+          Detail-oriented and innovative Software Developer with over 3 years of
+          experience in building scalable software, responsive websites and web
+          applications. Skilled in React, Node.js, Express, and TypeScript, with
+          expertise in web architecture, Restful APIs and database management.
+          Proven ability to gather requirements, translate them into technical
+          solutions, and collaborate with cross-functional teams. Proficient in
+          object-oriented programming (OOP), design patterns, troubleshooting,
+          and agile methodologies.
         </p>
       </div>
       <div className="flex flex-col md:flex-row w-full md:w-auto space-y-4 md:space-y-0 md:space-x-12 mb-16">

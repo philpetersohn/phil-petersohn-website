@@ -16,7 +16,8 @@ export default function Education() {
         </div>
         <div className="shadow-md p-4 transform transition-transform hover:scale-105 hover:shadow-2xl">
           <h1 className="font-bold text-lg">
-            Apprenticeship | Technical University of Berlin | Berlin
+            Apprenticeship Mechatronics | Technical University of Berlin |
+            Berlin
           </h1>
           <p className="italic text-lg mb-2">2012</p>
         </div>
