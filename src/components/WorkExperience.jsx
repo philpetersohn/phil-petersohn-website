@@ -12,7 +12,7 @@ function WorkExperience() {
         <h1 className="font-bold text-xl">
           Full Stack Developer | GFT Technologies SE | Remote
         </h1>
-        <p className="italic text-lg mb-2">Feb 2024 - Aug 2024</p>
+        <p className="italic text-lg mb-2">Feb 2024 - Sep 2024</p>
         <ul className="list-disc space-y-2 text-lg mb-6 pl-6 blue-bullets">
           <li>
             Designed, created and maintained key features using React,
