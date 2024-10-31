@@ -29,9 +29,9 @@ function Navbar() {
         <ul
           className={`${
             isDropdownOpen ? "block" : "hidden"
-          } absolute top-16 left-0 w-full bg-blue-100 md:flex md:space-x-10 md:static md:w-auto z-10`}
+          } absolute top-16 left-0 w-full bg-blue-100 md:flex md:space-x-10 md:static md:w-auto z-10 dropdown-menu`}
         >
-          <li className=" md:border-none w-full">
+          <li className="md:border-none w-full">
             <Link
               to="/home"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
@@ -40,7 +40,7 @@ function Navbar() {
               Home
             </Link>
           </li>
-          <li className=" md:border-none w-full">
+          <li className="md:border-none w-full">
             <Link
               to="/about"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
@@ -49,7 +49,7 @@ function Navbar() {
               About
             </Link>
           </li>
-          <li className=" md:border-none w-full">
+          <li className="md:border-none w-full">
             <Link
               to="/projects"
               className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
