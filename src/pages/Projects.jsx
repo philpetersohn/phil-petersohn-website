@@ -10,7 +10,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Task Management App",
-      description: "I created a tasks management app using the MERN stack.",
+      description: "I created a task management app using the MERN stack.",
       techStack: [
         "JavaScript",
         "React",
