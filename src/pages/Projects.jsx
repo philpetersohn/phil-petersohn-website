@@ -12,8 +12,9 @@ const Projects = () => {
       title: "Task Management App",
       description: "I created a task management app using the MERN stack.",
       techStack: [
-        "JavaScript",
         "React",
+        "JavaScript",
+        "TailwindCSS",
         "ChakraUI",
         "Node.js",
         "Express",
@@ -22,9 +23,23 @@ const Projects = () => {
       githubLink: "https://github.com/philpetersohn/nre-mern",
     },
     {
+      title: "Next Events",
+      description: "I created a next event app using Next.js and TailwindCSS.",
+      techStack: [
+        "Next.js",
+        "JavaScript",
+        "TailwindCSS",
+        "DaisyUI",
+        "Node.js",
+        "Express",
+        "MongoDB",
+      ],
+      githubLink: "https://github.com/philpetersohn/next-events",
+    },
+    {
       title: "My Website",
       description: "I created my own website using React and TailwindCSS.",
-      techStack: ["JavaScript", "React", "TailwindCSS", "HTML5", "CSS3"],
+      techStack: ["React", "JavaScript", "TailwindCSS", "HTML5", "CSS3"],
       githubLink: "https://github.com/philpetersohn/my-website",
     },
   ];
