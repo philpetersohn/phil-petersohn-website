@@ -23,6 +23,13 @@ const Projects = () => {
       githubLink: "https://github.com/philpetersohn/nre-mern",
     },
     {
+      title: "Intro to Node.js",
+      description:
+        "I created a Node.js app. This is a simple app that demonstrates how to use Node.js.",
+      techStack: ["Node.js", "JavaScript", "NPM", "CLI", "Jest"],
+      githubLink: "https://github.com/philpetersohn/intro-to-node",
+    },
+    {
       title: "Next Events",
       description: "I created a next event app using Next.js and TailwindCSS.",
       techStack: [
@@ -50,7 +57,7 @@ const Projects = () => {
         <h2 className="text-blue-600 text-4xl md:text-6xl font-bold mt-16 text-center mb-6">
           My Projects
         </h2>
-        <div className="flex flex-col space-y-8 mb-8 md:mb-0">
+        <div className="flex flex-col space-y-8 mb-8 md:mb-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
