@@ -1,55 +1,63 @@
-import ProjectCard from "../components/ProjectCard";
-import { useEffect } from "react";
+import ProjectCard from '../components/ProjectCard'
+import { useEffect } from 'react'
 
 const Projects = () => {
   useEffect(() => {
-    const section = document.querySelector("section");
-    section.classList.add("slide-in");
-  }, []);
+    const section = document.querySelector('section')
+    section.classList.add('slide-in')
+  }, [])
 
   const projects = [
     {
-      title: "Task Management App",
-      description: "I created a task management app using the MERN stack.",
+      title: 'Task Management App',
+      description: 'I created a task management app using the MERN stack.',
       techStack: [
-        "React",
-        "JavaScript",
-        "TailwindCSS",
-        "ChakraUI",
-        "Node.js",
-        "Express",
-        "MongoDB",
+        'React',
+        'JavaScript',
+        'TailwindCSS',
+        'ChakraUI',
+        'Node.js',
+        'Express',
+        'MongoDB',
       ],
-      githubLink: "https://github.com/philpetersohn/nre-mern",
+      githubLink: 'https://github.com/philpetersohn/nre-mern',
     },
     {
-      title: "Intro to Node.js",
+      title: 'Intro to Node.js',
       description:
-        "I created a Node.js app. This is a simple app that demonstrates how to use Node.js.",
-      techStack: ["Node.js", "JavaScript", "NPM", "CLI", "Jest"],
-      githubLink: "https://github.com/philpetersohn/intro-to-node",
+        'I created a Node.js app. This is a simple app that demonstrates how to use Node.js.',
+      techStack: ['Node.js', 'JavaScript', 'NPM', 'CLI', 'Jest'],
+      githubLink: 'https://github.com/philpetersohn/intro-to-node',
     },
     {
-      title: "Next Events",
-      description: "I created a next event app using Next.js and TailwindCSS.",
+      title: 'API design in Node.js',
+      description:
+        'I created a API design with Node.js. The API connects to a PostgreSQL database',
       techStack: [
-        "Next.js",
-        "JavaScript",
-        "TailwindCSS",
-        "DaisyUI",
-        "Node.js",
-        "Express",
-        "MongoDB",
+        'Node.js',
+        'JavaScript',
+        'TypeScript',
+        'Express',
+        'PostgreSQL',
+        'Jest',
       ],
-      githubLink: "https://github.com/philpetersohn/next-events",
+      githubLink: 'https://github.com/philpetersohn/api-design-node',
     },
     {
-      title: "My Website",
-      description: "I created my own website using React and TailwindCSS.",
-      techStack: ["React", "JavaScript", "TailwindCSS", "HTML5", "CSS3"],
-      githubLink: "https://github.com/philpetersohn/my-website",
+      title: 'Next Events',
+      description: 'I created a next event app using Next.js and TailwindCSS.',
+      techStack: [
+        'Next.js',
+        'JavaScript',
+        'TailwindCSS',
+        'DaisyUI',
+        'Node.js',
+        'Express',
+        'MongoDB',
+      ],
+      githubLink: 'https://github.com/philpetersohn/next-events',
     },
-  ];
+  ]
 
   return (
     <section className="bg-gray-100 px-8 md:px-16 lg:px-0">
@@ -64,7 +72,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects
