@@ -43,20 +43,6 @@ const Projects = () => {
       ],
       githubLink: 'https://github.com/philpetersohn/api-design-node',
     },
-    {
-      title: 'Next Events',
-      description: 'I created a next event app using Next.js and TailwindCSS.',
-      techStack: [
-        'Next.js',
-        'JavaScript',
-        'TailwindCSS',
-        'DaisyUI',
-        'Node.js',
-        'Express',
-        'MongoDB',
-      ],
-      githubLink: 'https://github.com/philpetersohn/next-events',
-    },
   ]
 
   return (
