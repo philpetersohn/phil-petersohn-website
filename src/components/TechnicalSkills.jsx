@@ -14,7 +14,7 @@ export default function TechnicalSkills() {
     },
     {
       title: "Tools",
-      description: "Git, VS Code, Jira, Kanban, Babel, npm/yarn, webpack, Jest, Cypress",
+      description: "Git, VS Code, Jira, Kanban, Babel, Npm/Yarn, webpack, Jest, Cypress",
     },
   ];
 

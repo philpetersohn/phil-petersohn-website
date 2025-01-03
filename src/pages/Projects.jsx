@@ -23,6 +23,18 @@ const Projects = () => {
       githubLink: 'https://github.com/philpetersohn/nre-mern',
     },
     {
+      title: 'Pizza App',
+      description: 'I created a pizza app using React.',
+      techStack: [
+        'React',
+        'JavaScript',
+        'CSS3',
+        'HTML5',
+        'Node.js',
+      ],
+      githubLink: 'https://github.com/philpetersohn/pizza-app',
+    },
+    {
       title: 'Intro to Node.js',
       description:
         'I created a Node.js app. This is a simple app that demonstrates how to use Node.js.',
