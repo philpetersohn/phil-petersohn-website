@@ -26,7 +26,7 @@ function About() {
         <p className="text-xl md:text-2xl mt-4 md:my-6 max-w-5xl mx-auto px-4">
           Passionate about implementing deep work practices to enhance
           productivity and code quality. Committed to continuous learning and
-          applying best practices in full stack software development.
+          applying best practices in software development.
         </p>
       </div>
       <CoreCompetencies />

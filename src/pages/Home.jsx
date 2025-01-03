@@ -49,7 +49,7 @@ function Home() {
         Philipp Petersohn
       </h1>
       <h2 className="text-blue-600 text-2xl md:text-3xl font-bold mb-8 text-center">
-        Full Stack Developer | React.js | Node.js | AWS
+        Software Developer | React.js | Node.js | Express | MongoDB
       </h2>
       <div className="max-w-3xl text-center">
         <p className="text-xl md:text-2xl mb-8 md:mb-11 max-w-3xl mx-auto">

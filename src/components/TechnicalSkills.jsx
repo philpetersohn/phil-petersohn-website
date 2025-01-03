@@ -10,7 +10,7 @@ export default function TechnicalSkills() {
     },
     {
       title: "Backend",
-      description: "Node.js, Amazon Web Services, Vercel,  RESTful APIs, Express, MongoDB, Mongoose",
+      description: "Node.js, Amazon Web Services, RESTful APIs, Express, MongoDB, PostgreSQL",
     },
     {
       title: "Tools",
