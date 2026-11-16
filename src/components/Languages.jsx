@@ -1,19 +1,25 @@
-import { FaLanguage } from "react-icons/fa";
-import "./coreCompetencies.css";
+const languages = [
+  { name: "German", level: "Native" },
+  { name: "English", level: "Full professional" },
+];
 
 function Languages() {
   return (
-    <div className="w-full max-w-4xl">
-      <div className="flex items-center my-6">
-        <FaLanguage className="text-blue-600 text-3xl mr-2" />
-        <h2 className="text-blue-600 text-3xl font-bold">Languages</h2>
-      </div>
-      <div className="flex items-start">
-        <ul className="list-disc space-y-2 text-lg mb-12 blue-bullets pl-8">
-          <li>English</li>
-          <li>German</li>
-        </ul>
-      </div>
+    <div className="mb-8 mt-16 w-full">
+      <h2 className="font-display text-2xl font-semibold tracking-tight text-white">
+        Languages
+      </h2>
+      <ul className="mt-6 flex flex-wrap gap-2">
+        {languages.map((language) => (
+          <li
+            key={language.name}
+            className="rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-300"
+          >
+            {language.name}
+            <span className="text-zinc-500"> · {language.level}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -1,110 +1,95 @@
-import { FaBriefcase } from "react-icons/fa";
-import "./coreCompetencies.css";
+const roles = [
+  {
+    title: "Senior Frontend Developer",
+    company: "Blue Charm Adherence",
+    place: "Vancouver, BC",
+    dates: "Jan 2026 – Present",
+    points: [
+      "Lead frontend architecture across a React Native app and a React/TypeScript web platform.",
+      "Rebuilt the mobile app from the ground up, owning UX flows, visual design, and component architecture.",
+      "Work with a backend developer on APIs, features, and caching so the product holds up end to end.",
+      "Contribute to AWS configuration, including Systems Manager Parameter Store.",
+      "Mentor two developers through architecture decisions and code reviews.",
+      "Introduced an AI-assisted design-to-development workflow with Cursor and Figma, cutting screen implementation time by about 30%.",
+      "Improve reliability and security with Sentry, root-cause analysis, and npm vulnerability checks before deploy.",
+    ],
+  },
+  {
+    title: "Full-Stack Developer",
+    company: "LvlUp Props",
+    place: "Vancouver, BC",
+    dates: "Sep 2025 – Dec 2025",
+    points: [
+      "Took a cross-platform sports analytics product from concept to production in three months with React Native, Expo, and a serverless Next.js backend.",
+      "Cut API latency with Redis caching, reaching p95 response times under 500 ms.",
+      "Built OCR bet-slip processing and LLM features, with prompt caching and cost controls.",
+      "Designed PostgreSQL models and Node.js/Prisma services for workflows and engagement.",
+      "Set up auth, monitoring, CI/CD, and multi-environment deploys with GitHub Actions and Expo EAS.",
+    ],
+  },
+  {
+    title: "Full-Stack Developer",
+    company: "One Sky Collective",
+    place: "Vancouver, BC",
+    dates: "Jan 2025 – Aug 2025",
+    points: [
+      "Led the MVP of a sustainability platform with Next.js, React, TypeScript, and PostgreSQL.",
+      "Shipped gamification — challenges and rewards — and raised user engagement by 25%.",
+      "Improved rendering and data fetching with server-side rendering, dynamic imports, and React Query.",
+      "Built and tuned Node.js APIs so data processing could scale with the product.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company: "GFT Technologies SE",
+    place: "Berlin, Germany",
+    dates: "Jan 2024 – Sep 2024",
+    points: [
+      "Built enterprise frontend applications in React and TypeScript with a maintainable architecture.",
+      "Helped cut load times by about 25% through frontend optimization, monitoring, and CI/CD.",
+      "Designed serverless AWS infrastructure with Lambda, S3, and Systems Manager Parameter Store.",
+      "Strengthened test coverage with Jest and Cypress and reduced production defects.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company: "Thinslices",
+    place: "Berlin, Germany",
+    dates: "Feb 2021 – Dec 2023",
+    points: [
+      "Delivered frontend applications with Next.js, React, and TypeScript across client projects.",
+      "Implemented AI-driven content categorization, replacing manual work and improving scalability.",
+      "Contributed to frontend architecture, code reviews, and Agile delivery on distributed teams.",
+    ],
+  },
+];
 
 function WorkExperience() {
   return (
-    <div className="w-full max-w-4xl space-y-6">
-      <div className="flex items-center mb-6 mt-6">
-        <FaBriefcase className="text-blue-600 text-3xl mr-2" />
-        <h1 className="text-blue-600 text-3xl font-bold">Work Experience</h1>
-      </div>
-      <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
-        <h1 className="font-bold text-xl">
-          Full Stack Developer | GFT Technologies SE | Remote
-        </h1>
-        <p className="italic text-lg mb-2">Feb 2024 - Sep 2024</p>
-        <ul className="list-disc space-y-2 text-lg mb-6 pl-6 blue-bullets">
-          <li>
-            Designed, created and maintained key features using React,
-            TypeScript, and Node.js, ensuring the delivery of scalable and
-            robust components that enhanced the products core functionality
+    <div className="mt-16 w-full">
+      <h2 className="font-display text-2xl font-semibold tracking-tight text-white">
+        Experience
+      </h2>
+      <ol className="mt-8 space-y-10 border-l border-white/10 pl-6">
+        {roles.map((role) => (
+          <li key={role.company + role.dates} className="relative">
+            <span className="absolute -left-[1.65rem] top-1.5 h-2.5 w-2.5 rounded-full bg-violet-300 ring-4 ring-zinc-950" />
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+              <h3 className="text-lg font-medium text-white">
+                {role.title}
+                <span className="text-zinc-400"> · {role.company}</span>
+              </h3>
+              <p className="shrink-0 text-sm text-zinc-500">{role.dates}</p>
+            </div>
+            <p className="mt-1 text-sm text-zinc-500">{role.place}</p>
+            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-zinc-400">
+              {role.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
           </li>
-          <li>
-            Utilized AWS Lambda, S3, and Parameter Store to create a scalable,
-            serverless application for managing user data, automating processes
-            to improve efficiency, and securely storing configuration
-            parameters, which resulted in faster deployment times and reduced
-            operational overhead
-          </li>
-          <li>
-            Improved application test coverage using Jest and Cypress, which
-            reduced bugs in production and enhanced overall code reliability
-          </li>
-          <li>
-            Optimized application performance by monitoring with Datadog,
-            leading to a 25% improvement in load times and smoother user
-            experiences
-          </li>
-          <li>
-            Spearheaded code review processes with source control management,
-            establishing best practices and guidelines that elevated code
-            quality and maintainability
-          </li>
-          <li>
-            Collaborated with team members during Scrum meetings, fostering
-            cross-functional communication, which increased team productivity by
-            streamlining task prioritization and issue resolution
-          </li>
-          <li>
-            Contributed to DevOps methodology for CI/CD, allowing for multiple
-            developers and business teams to collaborate and release changes
-            simultaneously
-          </li>
-        </ul>
-      </div>
-      <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
-        <h1 className="font-bold text-xl">
-          Frontend Developer | Thinslices | Hybrid
-        </h1>
-        <p className="italic text-lg mb-2">May 2021 - Dec 2023</p>
-        <ul className="list-disc space-y-2 text-lg mb-6 pl-6 blue-bullets">
-          <li>
-            Implemented dynamic content filtering using Next, React, and
-            TypeScript, improving content discovery speed by 40% and enhancing
-            user engagement
-          </li>
-          <li>
-            Integrated AI-based tool for automating content categorization,
-            reducing manual categorization efforts by 50% and increasing user
-            efficiency and platform scalability
-          </li>
-          <li>
-            Ensured responsiveness and cross-browser compatibility using
-            Tailwind CSS, resulting in a seamless user experience across
-            devices, with a 20% increase in mobile user retention
-          </li>
-          <li>
-            Enhanced platform accessibility by applying HTML5 and SEO best
-            practices, improving both user experience for diverse audiences and
-            search engine visibility, leading to a 15% boost in organic traffic
-          </li>
-          <li>
-            Conducted code reviews with GitHub and actively participated in the
-            agile development process, ensuring timely, efficient product
-            delivery while maintaining high code quality and reducing technical
-            debt
-          </li>
-        </ul>
-      </div>
-      <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
-        <h1 className="font-bold text-xl">
-          Intern Frontend Developer | Thinslices | Hybrid
-        </h1>
-        <p className="italic text-lg mb-2">Feb 2021 - Apr 2021</p>
-        <ul className="list-disc space-y-2 text-lg mb-6 pl-6 blue-bullets">
-          <li>
-            Learned HTML5, CSS3, and JavaScript through books, videos, and
-            documentation, developing a strong foundation in front-end web
-            development and best practices
-          </li>
-          <li>
-            Collaborated on projects from Frontend Mentor with multiple team
-            members, gaining hands-on experience in code reviews, agile
-            methodologies, and working with tools like Jira, while effectively
-            managing time and tasks
-          </li>
-        </ul>
-      </div>
+        ))}
+      </ol>
     </div>
   );
 }

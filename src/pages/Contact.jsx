@@ -6,81 +6,91 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import "./contact.css";
+
+const channels = [
+  {
+    icon: FaEnvelope,
+    label: "Email",
+    value: "petersohn.phil@gmail.com",
+    href: "mailto:petersohn.phil@gmail.com",
+  },
+  {
+    icon: FaPhone,
+    label: "Phone",
+    value: "+1 250 619 1329",
+    href: "tel:+12506191329",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    value: "philipp-petersohn",
+    href: "https://www.linkedin.com/in/philipp-petersohn",
+  },
+  {
+    icon: FaGithub,
+    label: "GitHub",
+    value: "philpetersohn",
+    href: "https://github.com/philpetersohn",
+  },
+  {
+    icon: FaMapMarkerAlt,
+    label: "Location",
+    value: "Vancouver, Canada",
+  },
+];
 
 function Contact() {
   useEffect(() => {
     const section = document.querySelector("section");
-    section.classList.add("slide-in");
+    section.classList.add("fade-in");
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center opacity-0 px-8 md:px-16 lg:px-0 mt-16">
-      <div className="text-center">
-        <h1 className="text-blue-600 text-4xl md:text-6xl font-bold text-center mb-6">
-          Contact Me
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 md:mb-11 max-w-3xl mx-auto">
-          I am always open to new opportunities and collaborations. Feel free to
-          reach out through any of the following channels:
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-          <div className="flex flex-col items-center text-lg mb-2 md:col-span-1 md:col-start-1">
-            <FaEnvelope className="hover:scale-110 transition-transform text-blue-600 mb-1 text-3xl" />
-            <h1 className="text-blue-600 mb-1 font-bold">Email</h1>
+    <section className="mx-auto max-w-5xl px-6 py-20 opacity-0">
+      <p className="text-xs font-medium uppercase tracking-[0.22em] text-violet-300">
+        Contact
+      </p>
+      <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-white md:text-6xl">
+        Let's talk.
+      </h1>
+      <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 md:text-lg">
+        Open to new opportunities and collaborations. A project, a question, or
+        a hello — I will get back to you.
+      </p>
+      <div className="mt-12 grid gap-3 sm:grid-cols-2">
+        {channels.map((channel) => {
+          const Icon = channel.icon;
+          const inner = (
+            <>
+              <Icon className="text-violet-300" aria-hidden="true" />
+              <div>
+                <p className="text-xs uppercase tracking-[0.16em] text-zinc-500">
+                  {channel.label}
+                </p>
+                <p className="mt-1 text-sm text-white">{channel.value}</p>
+              </div>
+            </>
+          );
+          const className = `flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 transition hover:border-white/20 ${
+            channel.label === "Location" ? "sm:col-span-2" : ""
+          }`;
+
+          return channel.href ? (
             <a
-              href="mailto:petersohn.phil@gmail.com"
-              className="text-blue-900 hover:underline"
+              key={channel.label}
+              href={channel.href}
+              target={channel.href.startsWith("http") ? "_blank" : undefined}
+              rel={channel.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              className={className}
             >
-              petersohn.phil@gmail.com
+              {inner}
             </a>
-          </div>
-          <div className="flex flex-col items-center text-lg mb-2 md:col-span-1 md:col-start-3">
-            <FaMapMarkerAlt className="hover:scale-110 transition-transform text-blue-600 mb-1 text-3xl" />
-            <h1 className="text-blue-600 mb-1 font-bold">Location</h1>
-            <span className="text-blue-900">Vancouver, Canada</span>
-          </div>
-          <div className="flex flex-col items-center text-lg mb-2 md:col-span-3">
-            <FaPhone className="hover:scale-110 transition-transform text-blue-600 mb-1 text-3xl" />
-            <h1 className="text-blue-600 mb-1 font-bold">Phone</h1>
-            +1 250 619 1329
-          </div>
-          <div className="flex flex-col items-center text-lg mb-2 md:col-span-1 md:col-start-1">
-            <FaLinkedin className="hover:scale-110 transition-transform text-blue-600 mb-1 text-3xl" />
-            <h1 className="text-blue-600 mb-1 font-bold">LinkedIn</h1>
-            <a
-              href="https://www.linkedin.com/in/philipp-petersohn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-900 hover:underline"
-            >
-              linkedin.com/in/philipp-petersohn
-            </a>
-          </div>
-          <div className="flex flex-col items-center text-lg mb-2 md:col-span-1 md:col-start-3">
-            <FaGithub className="hover:scale-110 transition-transform text-blue-600 mb-1 text-3xl" />
-            <h1 className="text-blue-600 mb-1 font-bold">GitHub</h1>
-            <a
-              href="https://github.com/philpetersohn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-900 hover:underline"
-            >
-              github.com/philipp-petersohn
-            </a>
-          </div>
-        </div>
-        <div className="text-xl md:text-2xl mb-8 md:mb-11 max-w-4xl mx-auto px-12 py-6 bg-blue-600 mt-8 my-6 rounded-3xl">
-          <h1 className="text-blue-100 text-2xl md:text-3xl font-bold m-4">
-            Let us connect!
-          </h1>
-          <p className="text-blue-100 m-4">
-            Whether you have a project in mind, a question about my work, or
-            just want to say hello, I would love to hear from you. Choose your
-            preferred method of contact above, and I will get back to you as
-            soon as possible.
-          </p>
-        </div>
+          ) : (
+            <div key={channel.label} className={className}>
+              {inner}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

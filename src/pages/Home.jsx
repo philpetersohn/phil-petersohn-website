@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaArrowRight, FaLightbulb } from "react-icons/fa"; // Import the right arrow and light bulb icons
-import "./home.css";
 import me from "../assets/Picture4.jpg";
+
+const stack = ["React", "React Native", "Next.js", "TypeScript", "Node.js", "AWS"];
 
 function Home() {
   const navigate = useNavigate();
@@ -12,72 +12,55 @@ function Home() {
     section.classList.add("fade-in");
   }, []);
 
-  const handleGetInTouchClick = () => {
-    navigate("/contact");
-    window.scrollTo(0, 0);
-    closeDropdown();
-  };
-
-  const handleLearnMoreClick = () => {
-    navigate("/about");
-    window.scrollTo(0, 0);
-    closeDropdown();
-  };
-
-  const closeDropdown = () => {
-    const dropdown = document.querySelector(".dropdown-menu");
-    if (dropdown) {
-      dropdown.classList.remove("block");
-      dropdown.classList.add("hidden");
-    }
-    const navbarButton = document.querySelector("nav button");
-    if (navbarButton) {
-      navbarButton.textContent = "☰";
-    }
-  };
-
   return (
-    <section className="flex flex-col items-center opacity-0 justify-center mt-16 px-8 md:px-4 lg:px-0 md:pt-0">
-      <figure className="w-32 h-32 md:w-48 md:h-48 mb-6">
-        <img
-          src={me}
-          alt="Profile picture"
-          className="rounded-full w-full h-full object-cover"
-        />
-      </figure>
-      <h1 className="text-blue-600 text-4xl md:text-6xl font-bold mb-6 text-center">
-        Philipp Petersohn
-      </h1>
-      <h2 className="text-blue-600 text-2xl md:text-3xl font-bold mb-8 text-center">
-        Software Developer | React.js | Node.js | Express | MongoDB
-      </h2>
-      <div className="max-w-3xl text-center">
-        <p className="text-xl md:text-2xl mb-8 md:mb-11 max-w-3xl mx-auto">
-          Detail-oriented and innovative Software Developer with over 3 years of
-          experience in building scalable software, responsive websites and web
-          applications. Skilled in React, Node.js, Express, and TypeScript, with
-          expertise in web architecture, Restful APIs and database management.
-          Proven ability to gather requirements, translate them into technical
-          solutions, and collaborate with cross-functional teams. Proficient in
-          object-oriented programming (OOP), design patterns, troubleshooting,
-          and agile methodologies.
-        </p>
-      </div>
-      <div className="flex flex-col md:flex-row w-full md:w-auto space-y-4 md:space-y-0 md:space-x-12 mb-16">
-        <button
-          onClick={handleGetInTouchClick}
-          className="w-full md:w-auto bg-blue-600 text-lg md:text-xl font-semibold text-blue-100 py-3 px-10 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors h-14 flex items-center justify-center"
-        >
-          Get in Touch
-          <FaArrowRight className="ml-2" />
-        </button>
-        <button
-          onClick={handleLearnMoreClick}
-          className="w-full md:w-auto bg-blue-100 text-lg md:text-xl font-semibold text-blue-600 py-3 px-4 box-border border-2 border-blue-500 rounded-lg hover:bg-blue-400 hover:text-blue-100 transition-colors h-14 flex items-center justify-center"
-        >
-          Learn more
-          <FaLightbulb className="ml-2" />
-        </button>
+    <section className="relative mx-auto flex min-h-[calc(100vh-8rem)] max-w-5xl flex-col justify-center px-6 py-20 opacity-0">
+      <div className="pointer-events-none absolute left-1/2 top-16 h-64 w-64 -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" />
+      <div className="relative flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-2xl">
+          <p className="text-xs font-medium uppercase tracking-[0.22em] text-violet-300">
+            Software Developer
+          </p>
+          <h1 className="mt-4 font-display text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl">
+            Philipp Petersohn
+          </h1>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 md:text-lg">
+            I design and ship production web and mobile apps. Five-plus years
+            across React, React Native, Next.js, TypeScript, and Node.js —
+            from frontend architecture to APIs, databases, and AWS.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-2">
+            {stack.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-300"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <button
+              onClick={() => navigate("/contact")}
+              className="rounded-full bg-white px-6 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+            >
+              Get in touch
+            </button>
+            <button
+              onClick={() => navigate("/about")}
+              className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5"
+            >
+              About me
+            </button>
+          </div>
+        </div>
+        <figure className="relative shrink-0 self-start md:self-auto">
+          <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-violet-400/30 to-transparent blur-xl" />
+          <img
+            src={me}
+            alt="Philipp Petersohn"
+            className="relative h-36 w-36 rounded-[1.6rem] object-cover ring-1 ring-white/15 md:h-52 md:w-52"
+          />
+        </figure>
       </div>
     </section>
   );

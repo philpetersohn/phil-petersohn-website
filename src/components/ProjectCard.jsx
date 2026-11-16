@@ -1,36 +1,49 @@
 import PropTypes from "prop-types";
-import { FaGithub } from "react-icons/fa";
 
-const ProjectCard = ({ title, description, techStack, githubLink }) => {
+const ProjectCard = ({ title, description, techStack, githubLink, liveLink }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl p-6">
-      <div className="p-6">
-        <h3 className="text-blue-600 text-2xl md:text-3xl font-bold mb-4">
-          {title}
-        </h3>
-        <p className="text-gray-700 text-lg md:text-xl mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4 items-center">
+    <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-white/20">
+      <h3 className="font-display text-2xl font-semibold tracking-tight text-white">
+        {title}
+      </h3>
+      <p className="mt-3 flex-grow text-sm leading-relaxed text-zinc-400">
+        {description}
+      </p>
+      <div className="mt-5 flex flex-wrap gap-2">
+        {techStack.map((tech) => (
+          <span
+            key={tech}
+            className="rounded-full bg-white/5 px-2.5 py-1 text-xs text-zinc-300"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+      {(githubLink || liveLink) && (
+        <div className="mt-6 flex gap-4">
           {githubLink && (
             <a
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 text-sm px-2 py-1 rounded-md hover:scale-110 transition-transform flex items-center"
+              className="text-sm font-medium text-violet-300 transition hover:text-violet-200"
             >
-              <FaGithub className="text-2xl" />
+              View on GitHub
             </a>
           )}
-          {techStack.map((tech, index) => (
-            <span
-              key={index}
-              className="text-xs md:text-sm px-2 md:px-3 py-1 md:py-1.5 rounded-md bg-blue-200 flex items-center h-8 md:h-10"
+          {liveLink && (
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-zinc-300 transition hover:text-white"
             >
-              {tech}
-            </span>
-          ))}
+              Live site
+            </a>
+          )}
         </div>
-      </div>
-    </div>
+      )}
+    </article>
   );
 };
 
@@ -39,6 +52,7 @@ ProjectCard.propTypes = {
   description: PropTypes.string.isRequired,
   techStack: PropTypes.arrayOf(PropTypes.string).isRequired,
   githubLink: PropTypes.string,
+  liveLink: PropTypes.string,
 };
 
 export default ProjectCard;

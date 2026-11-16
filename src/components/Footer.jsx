@@ -1,36 +1,47 @@
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
+const links = [
+  {
+    href: "https://www.linkedin.com/in/philipp-petersohn",
+    label: "LinkedIn",
+    icon: FaLinkedin,
+  },
+  {
+    href: "https://github.com/philpetersohn",
+    label: "GitHub",
+    icon: FaGithub,
+  },
+  {
+    href: "mailto:petersohn.phil@gmail.com",
+    label: "Email",
+    icon: FaEnvelope,
+  },
+];
+
 function Footer() {
   return (
-    <footer className="bg-blue-700 text-blue-100 py-6 px-4">
-      <div className="container mx-auto text-center">
-        <div className="flex justify-center space-x-6">
-          <a
-            href="https://www.linkedin.com/in/philipp-petersohn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-300"
-          >
-            <FaLinkedin className="text-3xl" />
-          </a>
-          <a
-            href="https://github.com/philpetersohn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-300"
-          >
-            <FaGithub className="text-3xl" />
-          </a>
-          <a
-            href="mailto:petersohn.phil@gmail.com"
-            className="hover:text-blue-300"
-          >
-            <FaEnvelope className="text-3xl" />
-          </a>
-        </div>
-        <p className="mt-4 text-lg text-center">
-          &copy; 2024 Philipp Petersohn. All rights reserved.
+    <footer className="mt-auto border-t border-white/10">
+      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
+        <p className="text-sm text-zinc-500">
+          © {new Date().getFullYear()} Philipp Petersohn
         </p>
+        <div className="flex items-center gap-5">
+          {links.map((link) => {
+            const Icon = link.icon;
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                aria-label={link.label}
+                className="text-zinc-400 transition hover:text-white"
+              >
+                <Icon className="text-lg" />
+              </a>
+            );
+          })}
+        </div>
       </div>
     </footer>
   );

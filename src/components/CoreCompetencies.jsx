@@ -1,32 +1,32 @@
-import { FaCode } from "react-icons/fa";
-import "./coreCompetencies.css";
+const competencies = [
+  "Full stack — React, TypeScript, Node.js, Express, MongoDB",
+  "Cloud technologies (AWS)",
+  "Database design and management",
+  "RESTful API development",
+  "Responsive web design",
+  "Problem-solving and debugging",
+  "Version control (Git)",
+  "Agile — Scrum and Kanban",
+  "Deep work and productivity",
+  "Continuous learning",
+];
 
 export default function CoreCompetencies() {
   return (
-    <div className="w-full max-w-4xl">
-      <div className="flex items-center mb-6 mt-6">
-        <FaCode className="text-blue-600 text-3xl mr-2" />
-        <h1 className="text-blue-600 text-3xl md:text-3xl font-bold text-nowrap">
-          Core Competencies
-        </h1>
-      </div>
-      <div className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl">
-        <ul className="list-disc space-y-2 text-lg mb-6 pl-6 blue-bullets">
-          <li>
-            Full Stack Development (React, TypeScript, Node.js, Express,
-            MongoDB)
+    <div className="mt-16 w-full">
+      <h2 className="font-display text-2xl font-semibold tracking-tight text-white">
+        Core competencies
+      </h2>
+      <ul className="mt-6 flex flex-wrap gap-2">
+        {competencies.map((item) => (
+          <li
+            key={item}
+            className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-zinc-300"
+          >
+            {item}
           </li>
-          <li>Cloud technologies (AWS)</li>
-          <li>Database Design and Management</li>
-          <li>RESTful API Development</li>
-          <li>Deep Work & Productivity Optimizations</li>
-          <li>Responsive Web Design</li>
-          <li>Problem-Solving & Debugging</li>
-          <li>Version Control (Git)</li>
-          <li>Agile Methodologies (Scrum, Kanban)</li>
-          <li>Committed to continuous learning and improvement</li>
-        </ul>
-      </div>
+        ))}
+      </ul>
     </div>
   );
 }

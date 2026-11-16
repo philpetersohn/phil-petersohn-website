@@ -1,78 +1,68 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/projects", label: "Projects" },
+  { to: "/contact", label: "Contact" },
+];
 
 function Navbar() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  const close = () => setIsOpen(false);
 
-  const closeDropdown = () => {
-    setIsDropdownOpen(false);
-  };
+  const linkClass = ({ isActive }) =>
+    `block rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+      isActive
+        ? "bg-white/10 text-white"
+        : "text-zinc-400 hover:text-white"
+    }`;
 
   return (
-    <nav className="bg-blue-100 text-blue-600 flex justify-between items-center p-4 w-full shadow-md">
-      <div className="flex-grow flex justify-start  md:pl-10 lg:mx-20">
-        <Link to="/home" className="pl-4 md:pl-0 font-bold text-2xl">
-          PP
-        </Link>
-      </div>
-      <div className="absolut">
+    <nav className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/75 backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+        <NavLink
+          to="/"
+          onClick={close}
+          className="font-display text-lg font-semibold tracking-tight text-white"
+        >
+          Philipp Petersohn
+        </NavLink>
         <button
-          className="block md:hidden font-bold text-xl mx-4"
-          onClick={toggleDropdown}
+          className="rounded-full border border-white/10 px-3 py-1.5 text-sm text-zinc-200 md:hidden"
+          onClick={() => setIsOpen((open) => !open)}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
-          {isDropdownOpen ? "✕" : "☰"}
+          {isOpen ? "Close" : "Menu"}
         </button>
-        <ul
-          className={`${
-            isDropdownOpen ? "block" : "hidden"
-          } absolute top-16 left-0 w-full bg-blue-100 md:flex md:space-x-10 md:static md:w-auto z-10 dropdown-menu`}
-        >
-          <li className="md:border-none w-full">
-            <Link
-              to="/home"
-              className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
-              onClick={closeDropdown}
-            >
-              Home
-            </Link>
-          </li>
-          <li className="md:border-none w-full">
-            <Link
-              to="/about"
-              className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
-              onClick={closeDropdown}
-            >
-              About
-            </Link>
-          </li>
-          <li className="md:border-none w-full">
-            <Link
-              to="/projects"
-              className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
-              onClick={closeDropdown}
-            >
-              Projects
-            </Link>
-          </li>
-          <li
-            className={`md:border-none lg:border-none w-full md:shadow-none ${
-              isDropdownOpen ? "shadow-lg" : ""
-            }`}
-          >
-            <Link
-              to="/contact"
-              className="block p-4 hover:text-blue-300 hover:scale-105 transition-transform w-full text-center font-semibold"
-              onClick={closeDropdown}
-            >
-              Contact
-            </Link>
-          </li>
+        <ul className="hidden items-center gap-1 md:flex">
+          {links.map((link) => (
+            <li key={link.to}>
+              <NavLink to={link.to} end={link.to === "/"} className={linkClass}>
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
+      {isOpen && (
+        <ul className="space-y-1 border-t border-white/10 px-4 py-3 md:hidden">
+          {links.map((link) => (
+            <li key={link.to}>
+              <NavLink
+                to={link.to}
+                end={link.to === "/"}
+                className={linkClass}
+                onClick={close}
+              >
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 }
